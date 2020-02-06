@@ -1,0 +1,13 @@
+[{
+        "id": 2,
+        "name": "Shoes",
+        "price": 800.00,
+        "url": "https://image.flaticon.com/icons/svg/863/863686.svg"
+    },
+    {
+        "id": 3,
+        "name": "Watch",
+        "price": 279.00,
+        "url": "https://image.flaticon.com/icons/svg/290/290700.svg"
+    }
+]

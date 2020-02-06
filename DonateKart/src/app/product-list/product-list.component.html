@@ -1,0 +1,21 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-2 card" id="card" *ngFor="let item of data">
+            <img class="card-img-top" src="{{item.url}}" alt="Headset Image">
+            <div class="card-body">
+                <h5 class="card-title">{{item.name}}</h5>
+                <h6 class="prodPrice">Price : {{item.price | currencyR: currencyState: currencyValues.USD : currencyValues.INR}}
+                </h6>
+            </div>
+        </div>
+
+        <!-- dropdown menu  -->
+        <div class="dropdown">
+            <select name="Currencey" id="Currencey" (change)="CurrencyValue($event)">
+        <option value="INR">INR</option>
+        <option value="USD">USD</option>
+
+      </select>
+        </div>
+    </div>
+</div>
