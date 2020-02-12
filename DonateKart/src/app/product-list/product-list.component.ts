@@ -24,6 +24,11 @@ export class ProductListComponent implements OnInit {
   ngOnInit() {
     this.getAllCurrencyExchanges();
     this.getProductList();
+    if (localStorage.getItem('currencyState')) {
+      this.currencyState = localStorage.getItem('currencyState');
+    } else{
+      this.currencyState = 'INR';
+    }
   }
 
   public getProductList() {
@@ -36,6 +41,7 @@ export class ProductListComponent implements OnInit {
 
   public CurrencyValue($event) {
     this.currencyState = $event.target.value;
+    localStorage.setItem("currencyState", this.currencyState);
   }
 
   public getAllCurrencyExchanges() {

@@ -11,8 +11,8 @@
 
         <!-- dropdown menu  -->
         <div class="dropdown">
-            <select name="Currencey" id="Currencey" (change)="CurrencyValue($event)">
-        <option value="INR">INR</option>
+            <select name="Currencey" id="Currencey" [(ngModel)]="currencyState" (change)="CurrencyValue($event)">
+        <option value="INR" selected>INR</option>
         <option value="USD">USD</option>
 
       </select>
